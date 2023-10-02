@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root {
+  --brand-color: hsl(46, 100%, 50%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  background: #000000;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 7%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  position: absolute;
+}
+
+.logo {
+  color: rgb(0 170 255);
+  font-weight: 900;
+  font-size: 2rem;
+  text-shadow: 1px 3px 3px #010101;
+}
+
+.navbar-1 {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-weight: 600;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin-left: 40rem;
+}
+
+.navbar-1 a {
+  padding: 5px;
+  color: rgb(0 170 255);
+  margin-left: 25px;
+}
+
+.navbar-1 a:hover,
+.navbar-1 a.active {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 2px 2px #000000;
+}
+
+.navbar-1 a:hover {
+  /* box-shadow: 0 3px 5px #ffffff; */
+  border-radius: 20px; /* Remove border-radius to make it rectangular */
+}
+
+.extra a {
+  color: black;
+  visibility: hidden;
+}
+
+/* landing page */
+.land {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0.1),
+      rgba(0, 0, 255, 0.3)
+    ),
+    url("../img/ben-neale-zpxKdH_xNSI-unsplash.jpg");
+}
+.land-co {
+  max-width: 600px;
+}
+.land-co h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+.land-co h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #0170f4;
+  padding-bottom: 5px;
+}
+.land-co p {
+  font-size: 15px;
+  font-weight: 300;
+  padding-bottom: 6px;
+}
+.land-co .btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+.btn-box-1 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #006b96;
+  border: 2px solid #00729f;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #140e0e;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-box-1:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+
+.btn-box-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #1b3d79;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.btn-box-1:hover::before {
+  width: 100%;
+}
+
+/* Change text color on hover */
+.btn-box-1:hover {
+  color: transparent; /* Hide the text when hovered */
+}
+
+/* Create text color animation */
+.btn-box-1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #035778;
+  color: #ffffff;
+  z-index: 2;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide the overflowing text */
+}
+
+.btn-box-1:hover::after {
+  background: #035778; /* Change the background color of the text animation when hovered */
+  width: 100%; /* Animate to full width */
+}
+
+/* Service */
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(to top, #00a8ff, #c23616);
+  color: #fff;
+}
+
+.service-header {
+  text-align: center;
+  margin-top: 20px;
+}
